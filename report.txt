@@ -1,0 +1,42 @@
+Hava Kantrowitz
+CS3650
+Processes Report
+
+Khoury Server
+------------
+OS: CentOS Linux 7 (CORE)
+Processor Model: Intel (R) Xeon (R) Gold 5118 CPU @ 2.30 GHz
+# Processor Cores: 12
+RAM: 196G
+
+My Local VM
+------------
+OS: Debian GNU/Linux 10 (buster)
+Processor Model: Intel (R) Core (TM) i7-8565U CPU @ 1.80 GHz
+# Processor Cores: 2
+RAM: 1.9G
+
+              Measured Time and Parallel Speed Up 
+----------------------------------------------------------------------
+|               | Home 1 | Home 4 | Home 8 | CCIS 1 | CCIS 4 | CCIS 8|
+----------------------------------------------------------------------
+| Measured Time |  65.37 |  43.68 |  41.52 |  68.96 |  30.34 |  24.56| 
+----------------------------------------------------------------------
+| Parallel S-up |    1   |  1.497 |  1.574 |    1   |  2.273 |  2.808|
+----------------------------------------------------------------------
+
+If the optimal parallel speedup is the greatest jump in speed, the OPS is 4. 
+If the optimal parallel speedup is the greatest number, the OPS is 8. 
+
+On both machines, the single process took a long time to run, 4 
+processes took significantly faster, and 8 processes ran
+faster, though with not as big a jump in speed as in going
+from 1 process to 4. This is because increasing the 
+number of processes makes the sorting go faster, but
+we will eventually hit the point of diminishing returns
+where we have parallelized everything we can, and can't
+squeeze out any more parallelization (and therefore
+any more speed), so adding more processes doesn't
+help. 
+
+TALK ABOUT AMDAHLS/GUSTAFSONS LAW 
